@@ -47,7 +47,7 @@ const CategoryItem = ({ title, color, items, collapsed, onReportClick }) => {
 
       {/* Tooltip (when collapsed) */}
       {collapsed && (
-        <span className="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-2 py-1 text-xs text-white bg-black rounded shadow-lg opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all whitespace-nowrap z-20">
+        <span className="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-2 py-1 text-xs text-white bg-black rounded shadow-lg opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all whitespace-nowrap z-80">
           {title}
         </span>
       )}

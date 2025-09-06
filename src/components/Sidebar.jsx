@@ -4,7 +4,7 @@ import CategoryItem from "./CategoryItem";
 const Sidebar = ({collapsed, setCollapsed, onReportClick}) => {
   
   return (
-    <aside className={`${collapsed ? "w-34 items-center" : "w-1/3"} p-6 bg-[#fbf2ec] transition-all duration-500 flex flex-col `}>
+    <aside className={`${collapsed ? "w-34 items-center" : "w-1/3"} p-6 bg-[#fbf2ec] transition-all duration-500 flex flex-col`}>
       {/* Filter Title */}
       <div className="flex justify-between items-center mb-6">
         {!collapsed && (
