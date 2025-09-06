@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav className="flex items-center gap-3 fixed top-0 left-0 w-full z-50 
-                    bg-white/70 backdrop-blur-md shadow-md px-4 py-2 transition">
+                    bg-[#fbf2ec]/70 backdrop-blur-md shadow-md px-4 py-2 transition">
       
       {/* Logo */}
       <div className="logo bg-white/80 backdrop-blur-sm shadow rounded-md px-4 py-2">
