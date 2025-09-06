@@ -14,7 +14,7 @@ const Sidebar = ({collapsed, setCollapsed, onReportClick}) => {
         </div>
         )}
         {/* Menu button should always show */}
-        <div className="p-3 cursor-pointer hover:bg-gray-200 rounded-lg" onClick={() => setCollapsed(!collapsed)}>
+        <div className="p-3 cursor-pointer hover:bg-[#FDE5D7] rounded-lg" onClick={() => setCollapsed(!collapsed)}>
           <img src="/src/assets/menu.png" alt="menu icon" className={`h-6 w-6 transform transition-transform duration-300 ${
               collapsed ? "rotate-90" : ""
             }`} />

@@ -12,7 +12,7 @@ const CategoryItem = ({ title, color, items, collapsed, onReportClick }) => {
 
   return (
     <li
-      className="relative group cursor-pointer hover:bg-gray-200 p-3 rounded-lg"
+      className="relative group cursor-pointer hover:bg-[#FDE5D7] p-3 rounded-lg"
       onClick={handleToggle}
     >
       {/* Category Header  */}
