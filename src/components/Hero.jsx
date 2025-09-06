@@ -45,7 +45,7 @@ const Hero = () => {
                   <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform">
                     Get Started
                   </button>
-                  <button className="px-6 py-3 rounded-xl border-2 border-orange-400 text-orange-500 font-semibold bg-white hover:bg-orange-50 hover:scale-105 transition-transform">
+                  <button className="px-6 py-3 rounded-xl border-2 border-orange-400 text-orange-500 font-semibold bg-[#fbf2ec] hover:bg-orange-50 hover:scale-105 transition-transform">
                     View Reports
                   </button>
                 </div>

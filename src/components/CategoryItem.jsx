@@ -54,7 +54,7 @@ const CategoryItem = ({ title, color, items, collapsed, onReportClick }) => {
 
       {/* Dropdown content (hidden when collapsed)*/}
       {!collapsed && isOpen && (
-        <ul className="mt-3 ml-12 space-y-3 text-sm">
+        <ul className="mt-3 ml-12 space-y-3 text-sm font-medium">
           {items.map((item, idx) => (
             <li key={idx} className="flex justify-between items-center">
               <span className="flex items-center gap-2">
@@ -65,11 +65,11 @@ const CategoryItem = ({ title, color, items, collapsed, onReportClick }) => {
                 {item.label}
               </span>
               <div className="flex items-center gap-3">
-                <a href="#" className="text-green-500 font-medium">
+                <a href="#" className="px-3 py-1 rounded-lg cursor-pointer border-2 border-orange-400 text-orange-500  bg-[#fbf2ec] hover:bg-orange-50 hover:scale-105 transition-transform">
                   Goto Page
                 </a>
                 <button
-                  className="border px-3 py-1 rounded-lg cursor-pointer"
+                  className="px-3 py-1 rounded-lg cursor-pointer bg-gradient-to-r from-orange-500 to-red-500 text-white  shadow-md hover:shadow-lg hover:scale-105 transition-transform"
                   onClick={(e) => {
                     e.stopPropagation(); // prevent toggling dropdown when clicking
                     onReportClick(item.label); // send report name to Hero
