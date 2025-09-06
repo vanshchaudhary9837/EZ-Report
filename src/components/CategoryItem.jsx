@@ -20,7 +20,7 @@ const CategoryItem = ({ title, color, items, collapsed, onReportClick }) => {
         <div className="flex items-center gap-3">
           {/* Colored Icon (always visible) */}
           <span
-            className={`rounded-lg p-3 flex items-center justify-center ${color}`}
+            className={`rounded-lg p-3 flex items-center justify-center ${color} transition-transform duration-300 group-hover:scale-110`}
           >
             <img
               src="/src/assets/document.png"
@@ -47,14 +47,18 @@ const CategoryItem = ({ title, color, items, collapsed, onReportClick }) => {
 
       {/* Tooltip (when collapsed) */}
       {collapsed && (
-        <span className="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+        <span className="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-2 py-1 text-xs text-white bg-black rounded shadow-lg opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all whitespace-nowrap z-20">
           {title}
         </span>
       )}
 
       {/* Dropdown content (hidden when collapsed)*/}
       {!collapsed && isOpen && (
-        <ul className="mt-3 ml-12 space-y-3 text-sm font-medium">
+        <ul
+          className={`mt-3 ml-12 space-y-3 text-sm font-medium transform origin-top transition-all duration-1000 ${
+      isOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+    }`}
+        >
           {items.map((item, idx) => (
             <li key={idx} className="flex justify-between items-center">
               <span className="flex items-center gap-2">
@@ -65,7 +69,10 @@ const CategoryItem = ({ title, color, items, collapsed, onReportClick }) => {
                 {item.label}
               </span>
               <div className="flex items-center gap-3">
-                <a href="#" className="px-3 py-1 rounded-lg cursor-pointer border-2 border-orange-400 text-orange-500  bg-[#fbf2ec] hover:bg-orange-50 hover:scale-105 transition-transform">
+                <a
+                  href="#"
+                  className="px-3 py-1 rounded-lg cursor-pointer border-2 border-orange-400 text-orange-500  bg-[#fbf2ec] hover:bg-orange-50 hover:scale-105 transition-transform"
+                >
                   Goto Page
                 </a>
                 <button

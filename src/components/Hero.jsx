@@ -20,7 +20,7 @@ const Hero = () => {
         {/* Hero Right Section */}
         <div
           className={`hero-right relative flex flex-col justify-center bg-[#FDE5D7] p-12 rounded-bl-3xl transition-all duration-500 ${
-            collapsed ? "w-[calc(100%-4rem)] pr-72" : "w-2/3 pr-58"
+            collapsed ? "w-[calc(100%-4rem)] " : "w-2/3 "
           }`}
         >
           {selectedReport ? (
